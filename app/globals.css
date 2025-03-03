@@ -17,8 +17,20 @@
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.hover-text svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  stroke: #ff4500; /* Customize underline color */
+  stroke-width: 2;
+  fill: none;
+  stroke-dasharray: 100; /* Length of the path */
+  stroke-dashoffset: 100; /* Initially hidden */
+  transition: stroke-dashoffset 0.5s ease-in-out;
+}
+
+.hover-text:hover svg {
+  stroke-dashoffset: 0; /* Reveal underline */
 }
